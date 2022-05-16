@@ -42,9 +42,22 @@ body {
     background-color: var(--white-200);
 }
 
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .wrapper {
     width: 80%;
     margin-inline: auto;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;  
+    line-height: 2.5rem;
+    color: var(--gray);
 }
 
 h2 {
@@ -94,9 +107,6 @@ header li a {
 #home {
     height: 64rem;
     padding-top: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     background-color: var(--gray-light);
 }
@@ -146,10 +156,7 @@ header li a {
 
 #functionality {
     height: 47.6rem;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 #functionality h2 {
@@ -178,9 +185,40 @@ header li a {
     margin-bottom: 1.6rem;
 }
 
-#functionality .functionality-card p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    line-height: 2.6rem;
-    color: var(--gray);
+/* =-=-=-=-=-=-=-= App =-=-=-=-=-=-=-= */
+
+
+#app {
+    background-color: var(--gray-light);
+    height: 47.6rem;
+}
+
+#app .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'A B';
+}
+
+#app .wrapper .col-a {
+    align-self: center;
+    grid-area: A;
+}
+
+#app .wrapper .col-b {
+    grid-area: B;
+    text-align: center;
+}
+
+#app h2 {
+    text-align: left;
+    font-size: 3.2rem;
+
+    margin-bottom: 3.2rem;
+}
+
+#app .download-app {
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
 }
