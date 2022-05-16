@@ -150,6 +150,7 @@ header li a {
     box-shadow: 1px 3px 4px rgba(19, 125, 224, 0.5);
     border-radius: 5rem;
     border: none;
+    cursor: pointer;
 }
 
 /* =-=-=-=-=-=-=-= Functionalities =-=-=-=-=-=-=-= */
