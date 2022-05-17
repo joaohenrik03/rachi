@@ -393,3 +393,16 @@ header li a {
 
     box-shadow: none;
 }
+
+/* =-=-=-=-=-=-=-= Footer =-=-=-=-=-=-=-= */
+
+footer {
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Sora', sans-serif;
+    font-size: 2rem;
+    color: var(--gray-200);
+}
