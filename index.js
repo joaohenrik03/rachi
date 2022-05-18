@@ -14,3 +14,17 @@ scrollReveal.reveal(`
     #contact, #contact #form,
     #footer
 `);
+
+function navShadowOnScroll() {
+    const navHeight = document.querySelector('nav').offsetHeight
+
+    if (scrollY > navHeight) {
+        document.querySelector('#header').classList.add('shadow-on-scroll')
+    } else {
+        document.querySelector('#header').classList.remove('shadow-on-scroll')
+    }
+}
+
+window.addEventListener('scroll', () => {
+    navShadowOnScroll()
+})
