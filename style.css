@@ -130,6 +130,7 @@ header button {
 
     position: absolute;
     right: 0;
+    z-index: 1000;
 
     border: 0;
     background: none;
@@ -476,6 +477,43 @@ footer {
     header .close-menu {
         opacity: 0;
         visibility: hidden;
+    }
+
+    /* =-=-=-=-=-=-=-= Show menu =-=-=-=-=-=-=-= */
+
+    body.menu-expended > *:not(header) {
+        display: none;
+    }
+
+    body.menu-expended header {
+        background-color: var(--white);
+    }
+
+    body.menu-expended .open-menu {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    body.menu-expended .close-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    body.menu-expended nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        height: 100vh;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body.menu-expended nav ul {
+        flex-direction: column;
     }
 
     /* =-=-=-=-=-=-=-= Home =-=-=-=-=-=-=-= */

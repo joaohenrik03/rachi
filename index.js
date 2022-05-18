@@ -15,8 +15,17 @@ scrollReveal.reveal(`
     #footer
 `);
 
+const Modal = {
+    open() {
+        document.body.classList.add('menu-expended')
+    },
+    close() {
+        document.body.classList.remove('menu-expended')
+    },
+}
+
 function navShadowOnScroll() {
-    const navHeight = document.querySelector('nav').offsetHeight
+    const navHeight = document.querySelector('#nav').offsetHeight
 
     if (scrollY > navHeight) {
         document.querySelector('#header').classList.add('shadow-on-scroll')
