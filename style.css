@@ -461,7 +461,9 @@ footer {
     /* =-=-=-=-=-=-=-= Navigation =-=-=-=-=-=-=-= */
 
     header nav {
-        display: none;
+        transform: translateY(100%);
+
+        transition: transform .4s;
     }    
 
     header button {
@@ -474,7 +476,8 @@ footer {
         stroke: var(--gray-200);
     }
 
-    header .close-menu {
+    header .close-menu,
+    header nav {
         opacity: 0;
         visibility: hidden;
     }
@@ -494,12 +497,14 @@ footer {
         visibility: hidden;
     }
 
-    body.menu-expended .close-menu {
+    body.menu-expended .close-menu,
+    body.menu-expended nav {
         opacity: 1;
         visibility: visible;
     }
 
     body.menu-expended nav {
+        transform: translateY(0);
         position: absolute;
         top: 0;
         right: 0;
