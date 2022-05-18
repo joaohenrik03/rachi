@@ -100,20 +100,36 @@ header .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: relative;
 }
 
-header ul {
+/* =-=-=-=-=-=-=-= Navigation =-=-=-=-=-=-=-= */
+
+header nav ul {
     display: flex;
     align-items: center;
     gap: 6.6rem;
     list-style: none;
 }
 
-header li a {
+header nav li a {
     font-family: 'Inter', sans-serif;
     font-size: 1.8rem;
     text-decoration: none;
     color: var(--gray);
+}
+
+header button {
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+    right: 0;
+
+    border: 0;
+    background: none;
+    cursor: pointer;
 }
 
 /* =-=-=-=-=-=-=-= Home =-=-=-=-=-=-=-= */
@@ -155,7 +171,6 @@ header li a {
 #home button {
     width: 20rem;
     height: 5.6rem;
-    padding: 1.6rem 3.6rem;
 }
 
 /* =-=-=-=-=-=-=-= Functionalities =-=-=-=-=-=-=-= */
@@ -195,8 +210,8 @@ header li a {
 
 
 #app {
-        background-color: var(--white-400);
-        height: 47.6rem;
+    background-color: var(--white-400);
+    height: 47.6rem;
 }
 
 #app .wrapper {
@@ -260,6 +275,7 @@ header li a {
 
     background-color: var(--white-400);
     border-radius: .8rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2); 
 
     text-align: center;
 
@@ -327,7 +343,7 @@ header li a {
 
 #plans .plans-card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);   
 }
 
 /* =-=-=-=-=-=-=-= Contact =-=-=-=-=-=-=-= */
@@ -406,3 +422,214 @@ footer {
     font-size: 2rem;
     color: var(--gray-200);
 }
+
+/* =-=-=-=-=-=-=-= Responsive =-=-=-=-=-=-=-= */
+/* =-=-=-=-=-=-=-= Responsive =-=-=-=-=-=-=-= */
+/* =-=-=-=-=-=-=-= Responsive =-=-=-=-=-=-=-= */
+
+@media (max-width: 1023px) {
+    /* =-=-=-=-=-=-=-= Global =-=-=-=-=-=-=-= */
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    .button { 
+        font-size: 1.6rem;
+    }
+
+    .wrapper{
+        width: min(50rem, 90%);
+
+    }
+
+    /* =-=-=-=-=-=-=-= Header =-=-=-=-=-=-=-= */
+
+    header {
+        height: 9vh;
+    }
+
+    /* =-=-=-=-=-=-=-= Navigation =-=-=-=-=-=-=-= */
+
+    header nav {
+        display: none;
+    }    
+
+    header button {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    header button svg path {
+        fill: var(--gray-200);
+        stroke: var(--gray-200);
+    }
+
+    header .close-menu {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* =-=-=-=-=-=-=-= Home =-=-=-=-=-=-=-= */
+
+    #home {
+        height: auto;
+        padding-top: 9vh;
+    }
+
+    #home button { 
+        font-size: 1.4rem;
+    }
+
+    #home .wrapper {
+        display: initial;
+    }
+
+    #home h1 {
+        font-size: 2.4rem;
+        line-height: 3rem;
+
+        max-width: 29rem;
+        margin-top: 4rem;
+        margin-bottom: 2.4rem;
+    }
+
+    #home img {
+        width: 21rem;    
+    }
+
+    #home button {
+        width: 14rem;
+        height: 3.2rem;      
+    }
+
+    /* =-=-=-=-=-=-=-= Functionalities =-=-=-=-=-=-=-= */
+
+    #functionality {
+        padding: 4rem 0;
+        height: auto;
+    }
+
+    #functionality h2 {
+        margin-bottom: 3.3rem;
+    }
+
+    #functionality .functionalities {
+        flex-direction: column;
+        gap: 3.5rem;
+    }
+
+    #functionality .functionality-card h3 {
+        font-size: 1.6rem;
+    }
+
+    /* =-=-=-=-=-=-=-= App =-=-=-=-=-=-=-= */
+
+    #app {
+        height: auto;
+        padding: 3.2rem 0;
+    }
+
+    #app .wrapper {
+        display: initial;
+    }
+
+    #app h2 {
+        text-align: center;
+    }
+
+    #app p {
+        text-align: center;
+    }
+    
+    #app .download-app {
+        margin-top: 3.2rem;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #app .download-app img {
+        width: 100%;
+    }
+
+    #app .col-b {
+        display: none;
+    }
+
+    /* =-=-=-=-=-=-=-= Plans =-=-=-=-=-=-=-= */
+
+    #plans {
+        height: auto;
+        padding: 4rem 0;
+    }
+
+    #plans p {
+        font-size: 1.6rem;
+    }
+
+    #plans .plans-container {
+        flex-direction: column;
+    }
+
+    #plans .plans-card {
+        width: min(32rem, 90%);
+        height: auto;
+        padding: 2.4rem;
+    }
+
+    #plans .plans-card h4 {
+        margin-bottom: 3rem;
+    }
+
+    #plans .plans-card .price {
+        margin-bottom: 4rem;
+    }
+
+    #plans .plans-card button {
+        margin-top: 5rem;
+        padding: .8rem 8rem;
+    }
+    
+    #plans .plans-card.favorite h4 {
+        margin-bottom: 1.4rem;
+        font-size: 2.4rem;
+    }
+
+    #plans .plans-card.favorite p {
+        color: white;
+    }
+    
+    #plans .plans-card.favorite p:nth-of-type(1) {
+        margin-bottom: .4rem;
+        font-size: 1.4rem;
+    }
+
+    /* =-=-=-=-=-=-=-= Contact =-=-=-=-=-=-=-= */
+
+    #contact {
+        height: 30rem;
+    }
+
+    #contact p {
+        margin-bottom: 2.4rem;
+    }
+
+    #contact form {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    #contact form input,
+    #contact form input::placeholder {
+        font-size: 1.4rem;
+    }
+
+    #contact form button {
+        padding: .8rem 13rem;
+    }
+}
+
