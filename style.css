@@ -445,6 +445,23 @@ header button {
     box-shadow: none;
 }
 
+/* =-=-=-=-=-=-=-= Back To Top Button =-=-=-=-=-=-=-= */
+
+.backToTop.show {
+    position: fixed;
+    z-index: 5;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.backToTop.show svg path {
+    stroke: var(--white);
+}
+
+.backToTop.show svg circle {
+    fill: var(--primary);
+}
+
 /* =-=-=-=-=-=-=-= Footer =-=-=-=-=-=-=-= */
 
 footer {
