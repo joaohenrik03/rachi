@@ -24,9 +24,9 @@ const Modal = {
     },
 }
 
-function navShadowOnScroll() {
-    const navHeight = document.querySelector('#nav').offsetHeight
+const navHeight = document.querySelector('#nav').offsetHeight
 
+function navShadowOnScroll(navHeight) {
     if (scrollY > navHeight) {
         document.querySelector('#header').classList.add('shadow-on-scroll')
     } else {
@@ -34,6 +34,15 @@ function navShadowOnScroll() {
     }
 }
 
+function backToTopButtonShow(navHeight) {
+    if (scrollY > navHeight) {
+        document.querySelector('.backToTop').classList.add('show')
+    } else {
+        document.querySelector('.backToTop').classList.remove('show')
+    }
+}
+
 window.addEventListener('scroll', () => {
-    navShadowOnScroll()
+    navShadowOnScroll(navHeight)
+    backToTopButtonShow(navHeight)
 })
